@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design docs and planning files
+mianawebsite.html
+motherduck-style-guide.md
+tech-stack.md
+website-structure.md
+
+# playwright screenshots
+.playwright-mcp/

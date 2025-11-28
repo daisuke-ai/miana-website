@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "mcp__plugin_edmunds-claude-code_playwright__browser_navigate",
+      "mcp__plugin_edmunds-claude-code_playwright__browser_take_screenshot",
+      "mcp__plugin_edmunds-claude-code_playwright__browser_resize",
+      "mcp__plugin_edmunds-claude-code_context7__resolve-library-id",
+      "mcp__plugin_edmunds-claude-code_context7__get-library-docs",
+      "mcp__plugin_edmunds-claude-code_playwright__browser_snapshot",
+      "mcp__plugin_edmunds-claude-code_playwright__browser_evaluate",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

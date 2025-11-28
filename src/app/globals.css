@@ -1,26 +1,185 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Miana Design System - Core Colors */
+  --background: #f4efea;
+  --foreground: #383838;
+  --foreground-muted: #666666;
+
+  /* Primary */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-foreground: #ffffff;
+
+  /* Accents */
+  --teal: #14b8a6;
+  --teal-dark: #0d9488;
+  --purple: #7c3aed;
+  --orange: #f59e0b;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --border: #eeeeee;
+  --border-dark: #dddddd;
+  --gray-light: #f1f1f1;
+  --gray-medium: #888888;
+
+  /* Badge */
+  --badge-bg: #fef3c7;
+  --badge-text: #92400e;
+
+  /* Card */
+  --card: #ffffff;
+  --card-foreground: #383838;
+
+  /* Spacing */
+  --header-mobile: 70px;
+  --header-desktop: 90px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius: 0.625rem;
+
+  /* Shadows - defined as CSS values, not variables */
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* shadcn compatibility */
+  --secondary: #f1f1f1;
+  --secondary-foreground: #383838;
+  --muted: #f1f1f1;
+  --muted-foreground: #666666;
+  --accent: #f1f1f1;
+  --accent-foreground: #383838;
+  --destructive: #ef4444;
+  --input: #eeeeee;
+  --ring: #2563eb;
 }
 
 @theme inline {
+  /* Spacing - required for padding/margin utilities in v4 */
+  --spacing: 0.25rem;
+
+  /* Core Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+
+  /* Primary */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  /* Accents */
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-purple: var(--purple);
+  --color-orange: var(--orange);
+
+  /* Neutrals */
+  --color-white: var(--white);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
+  --color-gray-light: var(--gray-light);
+  --color-gray-medium: var(--gray-medium);
+
+  /* Badge */
+  --color-badge-bg: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
+
+  /* Card */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* shadcn compatibility */
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, monospace;
+  --font-serif: "Times New Roman", Times, Georgia, serif;
+
+  /* Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* Reset & Base - inside @layer so Tailwind utilities can override */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    @apply bg-background text-foreground;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray-medium);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--gray-light);
+  }
+
+  /* Link Reset */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Button Reset */
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Card Shadows */
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-lg {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
