@@ -79,11 +79,11 @@ export function CTABanner() {
               whileTap={{ scale: 0.98 }}
             >
               <Link
-                href="tel:+1234567890"
+                href="/how-it-works"
                 className="inline-block bg-transparent text-white px-8 py-4 font-mono text-sm font-normal uppercase tracking-[0.5px] rounded transition-colors"
                 style={{ border: "1px solid rgba(255, 255, 255, 0.3)" }}
               >
-                Call Us Now
+                Learn How It Works
               </Link>
             </motion.div>
           </motion.div>
