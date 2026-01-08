@@ -123,11 +123,28 @@ function AboutHero() {
           </MotionItem>
 
           <MotionItem>
-            <p className="text-lg md:text-xl font-light text-foreground-muted leading-relaxed max-w-2xl mx-auto">
-              We're not just buying houses - we're solving problems, creating
-              opportunities, and building lasting relationships with homeowners
-              across California.
+            <p className="text-lg md:text-xl font-light text-foreground-muted leading-relaxed max-w-2xl mx-auto mb-6">
+              Miana is the consumer-facing brand of Vanguard Horizon REIT LLC, a real estate
+              investment trust registered in Wyoming. We specialize in purchasing residential
+              properties directly from homeowners through cash offers and flexible seller
+              financing options.
             </p>
+          </MotionItem>
+
+          <MotionItem>
+            <div
+              className="inline-block rounded-lg px-6 py-4 text-left"
+              style={{ backgroundColor: "rgba(37, 99, 235, 0.05)", border: "1px solid rgba(37, 99, 235, 0.1)" }}
+            >
+              <p className="font-mono text-xs uppercase tracking-wider text-primary mb-3">
+                Company Information
+              </p>
+              <div className="space-y-1 text-sm text-foreground-muted">
+                <p><strong className="text-foreground">Legal Entity:</strong> Vanguard Horizon REIT LLC</p>
+                <p><strong className="text-foreground">Brand Name:</strong> Miana</p>
+                <p><strong className="text-foreground">Location:</strong> 30 N Gould St Ste R, Sheridan, WY 82801</p>
+              </div>
+            </div>
           </MotionItem>
         </StaggerContainer>
       </div>

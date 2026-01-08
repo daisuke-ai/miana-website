@@ -99,9 +99,12 @@ function ContactHero() {
           </MotionItem>
 
           <MotionItem>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-[2px] md:tracking-[4px] uppercase text-foreground mb-6">
-              Let's <span className="text-primary">Talk</span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-[2px] md:tracking-[4px] uppercase text-foreground mb-3">
+              Contact <span className="text-primary">Miana</span>
             </h1>
+            <p className="font-mono text-sm uppercase tracking-wider text-foreground-muted mb-6">
+              Vanguard Horizon REIT LLC
+            </p>
           </MotionItem>
 
           <MotionItem>

@@ -35,13 +35,16 @@ export function HeroSection() {
             </MotionItem>
 
             <MotionItem>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.1] tracking-[2px] md:tracking-[4px] uppercase text-foreground mb-6 md:mb-8">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-[1.1] tracking-[2px] md:tracking-[4px] uppercase text-foreground mb-4 md:mb-6">
                 We Buy Houses.
                 <br />
                 <span className="text-primary">Fast. Fair.</span>
                 <br />
                 Flexible.
               </h1>
+              <p className="font-mono text-sm uppercase tracking-wider text-foreground-muted mb-4">
+                A Vanguard Horizon REIT LLC Company
+              </p>
             </MotionItem>
 
             <MotionItem>
