@@ -200,10 +200,15 @@ export function Footer() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <p className="text-sm" style={{ color: "#6b7280" }}>
-            © {new Date().getFullYear()} Miana Real Estate Acquisition. All
-            rights reserved.
-          </p>
+          <div className="text-center md:text-left">
+            <p className="text-sm mb-1" style={{ color: "#9ca3af" }}>
+              Miana is a brand operated by Vanguard Horizon REIT LLC.
+            </p>
+            <p className="text-sm" style={{ color: "#6b7280" }}>
+              © {new Date().getFullYear()} Miana Real Estate Acquisition. All
+              rights reserved.
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link
               href="/privacy"

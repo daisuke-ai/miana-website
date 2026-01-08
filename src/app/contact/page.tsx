@@ -128,10 +128,13 @@ function ContactFormSection() {
     propertyType: "",
     timeframe: "",
     message: "",
+    smsConsent: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, type } = e.target;
+    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
+    setFormData({ ...formData, [name]: newValue });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -212,14 +215,13 @@ function ContactFormSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label className="block font-mono text-xs uppercase tracking-wider text-foreground-muted mb-2">
-                      Phone Number *
+                      Phone Number
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      required
                       placeholder="(555) 123-4567"
                       className="w-full px-4 py-3 rounded-lg text-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary"
                       style={{
@@ -306,6 +308,25 @@ function ContactFormSection() {
                   </div>
                 </div>
 
+                {/* SMS Consent Checkbox */}
+                <div className="mt-1">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="smsConsent"
+                      checked={formData.smsConsent}
+                      onChange={handleChange}
+                      className="mt-1 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                    />
+                    <span className="text-sm text-foreground-muted leading-relaxed">
+                      By providing your mobile number, you agree to receive text messages from Miana (operated by Vanguard Horizon REIT LLC) regarding your property inquiry. Reply STOP to cancel; HELP for help. Message & data rates may apply. Messaging frequency may vary. View our{" "}
+                      <a href="/terms" className="underline hover:text-foreground">Terms of Service</a>
+                      {" "}and{" "}
+                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+                    </span>
+                  </label>
+                </div>
+
                 {/* Message */}
                 <div>
                   <label className="block font-mono text-xs uppercase tracking-wider text-foreground-muted mb-2">
@@ -338,7 +359,10 @@ function ContactFormSection() {
                 </motion.button>
 
                 <p className="text-xs text-center text-foreground-muted">
-                  By submitting, you agree to our privacy policy. No spam, ever.
+                  By submitting, you agree to our{" "}
+                  <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>
+                  {" "}and{" "}
+                  <a href="/terms" className="underline hover:text-foreground">Terms of Service</a>.
                 </p>
               </form>
             </div>

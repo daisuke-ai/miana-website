@@ -112,6 +112,85 @@ export default function TermsPage() {
                   </p>
                 </section>
 
+                {/* SMS Terms of Service */}
+                <section>
+                  <h2 className="font-serif text-2xl font-normal tracking-[1px] uppercase text-foreground mb-4">
+                    SMS Terms of Service
+                  </h2>
+                  <p className="mb-4">
+                    By opting in to receive SMS messages from Miana (operated by Vanguard Horizon REIT LLC), you agree to the following terms:
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Message Types
+                  </h3>
+                  <p className="mb-4">You may receive text messages regarding:</p>
+                  <ul className="space-y-2 list-none pl-0 mb-6">
+                    <li className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-2 before:h-2 before:bg-primary before:rounded-full">
+                      Property offer updates and status
+                    </li>
+                    <li className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-2 before:h-2 before:bg-primary before:rounded-full">
+                      Transaction-related communications
+                    </li>
+                    <li className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-2 before:h-2 before:bg-primary before:rounded-full">
+                      Appointment confirmations and reminders
+                    </li>
+                    <li className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-2 before:h-2 before:bg-primary before:rounded-full">
+                      Responses to your inquiries
+                    </li>
+                  </ul>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Message Frequency
+                  </h3>
+                  <p className="mb-6">
+                    Message frequency varies based on your property inquiry and transaction activity. You may receive multiple messages per week during active transactions, or occasional messages for general updates.
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Costs
+                  </h3>
+                  <p className="mb-6">
+                    Message and data rates may apply. Contact your mobile carrier for details about your text messaging plan.
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Opt-Out
+                  </h3>
+                  <p className="mb-6">
+                    You can cancel SMS service at any time by texting STOP to any message you receive from us. After texting STOP, you will receive a single confirmation message. You will not receive any additional messages unless you opt back in.
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Help
+                  </h3>
+                  <p className="mb-6">
+                    For help or more information, text HELP to any message you receive, email us at{" "}
+                    <a href="mailto:mian@miana.com.co" className="text-primary hover:underline">
+                      mian@miana.com.co
+                    </a>
+                    , or call 661-596-2010.
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Carrier Information
+                  </h3>
+                  <p className="mb-6">
+                    Major US carriers are supported. Carriers are not liable for delayed or undelivered messages.
+                  </p>
+
+                  <h3 className="font-serif text-xl font-normal tracking-[0.5px] text-foreground mb-3 mt-6">
+                    Privacy
+                  </h3>
+                  <p>
+                    Your privacy is important to us. See our{" "}
+                    <a href="/privacy" className="text-primary hover:underline">
+                      Privacy Policy
+                    </a>{" "}
+                    for information on how we handle your data. Your SMS consent and phone number will not be shared with third parties for marketing purposes.
+                  </p>
+                </section>
+
                 {/* Links to Other Websites */}
                 <section>
                   <h2 className="font-serif text-2xl font-normal tracking-[1px] uppercase text-foreground mb-4">

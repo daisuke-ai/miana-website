@@ -344,6 +344,44 @@ export default function PrivacyPage() {
                   </p>
                 </section>
 
+                {/* SMS/Text Messaging */}
+                <section>
+                  <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-[2px] uppercase text-foreground mb-6">
+                    SMS/Text Messaging
+                  </h2>
+                  <p className="mb-4">
+                    By providing your phone number and opting in to receive SMS messages from Miana (operated by Vanguard Horizon REIT LLC), you consent to receive text messages related to real estate communications, property inquiries, offer updates, and transaction-related information.
+                  </p>
+
+                  <h3 className="font-semibold text-lg text-foreground mb-3">Program Details</h3>
+                  <ul className="space-y-2 pl-6 mb-6">
+                    <li className="relative before:content-[''] before:absolute before:left-[-1rem] before:top-[0.6rem] before:w-1.5 before:h-1.5 before:bg-primary before:rounded-full">
+                      Message frequency varies based on your inquiry and transaction status
+                    </li>
+                    <li className="relative before:content-[''] before:absolute before:left-[-1rem] before:top-[0.6rem] before:w-1.5 before:h-1.5 before:bg-primary before:rounded-full">
+                      Message and data rates may apply (check with your carrier)
+                    </li>
+                    <li className="relative before:content-[''] before:absolute before:left-[-1rem] before:top-[0.6rem] before:w-1.5 before:h-1.5 before:bg-primary before:rounded-full">
+                      Reply STOP to opt out of messages at any time
+                    </li>
+                    <li className="relative before:content-[''] before:absolute before:left-[-1rem] before:top-[0.6rem] before:w-1.5 before:h-1.5 before:bg-primary before:rounded-full">
+                      Reply HELP for assistance or contact us at{" "}
+                      <a href="mailto:mian@miana.com.co" className="text-primary hover:underline">
+                        mian@miana.com.co
+                      </a>{" "}
+                      or call 661-596-2010
+                    </li>
+                  </ul>
+
+                  <h3 className="font-semibold text-lg text-foreground mb-3">SMS Consent and Data Sharing</h3>
+                  <p className="mb-4">
+                    No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+                  </p>
+                  <p className="mb-6">
+                    You may opt out of receiving text messages at any time by replying STOP to any message. After opting out, you will receive one final confirmation message and will no longer receive SMS messages from us unless you opt back in by submitting a new inquiry through our website.
+                  </p>
+                </section>
+
                 {/* Contact Us */}
                 <section>
                   <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-[2px] uppercase text-foreground mb-6">
