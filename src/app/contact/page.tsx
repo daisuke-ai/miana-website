@@ -32,8 +32,8 @@ const contactInfo = [
         <circle cx="12" cy="9" r="2.5" />
       </svg>
     ),
-    label: "Headquarters",
-    value: "California, USA",
+    label: "Address",
+    value: "30 N Gould St Ste R, Sheridan, WY 82801",
     href: null,
   },
 ];
